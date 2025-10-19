@@ -36,7 +36,12 @@ jobs:
         working-directory: ./vial-qmk
         run: |
           make $KEYBOARD:$KEYMAP -j 1
-          ls .build
+
+      - name: test
+        run:
+          ls
+          echo "==================="
+          ls -l vial-qmk/.build
 
       - name: Upload Firmware Artifact
         uses: actions/upload-artifact@v4
