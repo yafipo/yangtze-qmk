@@ -44,7 +44,7 @@ jobs:
           ls
           echo "---"
           ls yangtze-qmk
-          echo "---"
+          echo "---${KEYMAP} ${KEYBOARD}---"
           ls yangtze-qmk/$KEYMAP
           mkdir -p vial-qmk/keyboards/$KEYBOARD/keymaps
           cp -r yangtze-qmk/$KEYMAP vial-qmk/keyboards/$KEYBOARD/keymaps
