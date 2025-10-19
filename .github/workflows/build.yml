@@ -2,7 +2,7 @@ name: Build Vial Firmware
 
 env:
   KEYBOARD: yangtze
-  KEYMAP: 67
+  KEYMAP: vail
 
 on:
   push:
