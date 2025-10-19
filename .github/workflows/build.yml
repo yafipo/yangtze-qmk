@@ -36,10 +36,11 @@ jobs:
         working-directory: ./vial-qmk
         run: |
           make $KEYBOARD:$KEYMAP -j 1
+          ls .build
 
       - name: Upload Firmware Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event.inputs.keyboard_target }}_Vial_${{ github.event.inputs.keymap_name }}_Firmware
+          name: ${{ env.KEYBOARD }}_Vial_${{ env.KEYMAP }}_Firmware
           path: ./vial-qmk/.build/*.{hex,bin,uf2}
           retention-days: 7
