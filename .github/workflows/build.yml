@@ -47,5 +47,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.KEYBOARD }}_Vial_${{ env.KEYMAP }}_Firmware
-          path: vial-qmk/.build/**/*.{hex,bin,uf2}
+          path: vial-qmk/.build/*.uf2
           retention-days: 7
