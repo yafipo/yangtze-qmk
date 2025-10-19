@@ -24,7 +24,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: vial-kb/vial-qmk
-          path: vial-qmk-repo
           fetch-depth: 0
 
       # 步骤 2: 检出你的 Keymap 仓库
@@ -34,7 +33,7 @@ jobs:
       # 步骤 3: 初始化 QMK submodules
       - name: Init Vial-QMK Submodules
         run: |
-          cd vial-qmk-repo
+          cd vial-qmk
           git submodule update --init --recursive
 
       # 步骤 4: 复制 Keymap 文件
@@ -45,13 +44,13 @@ jobs:
           KEYBOARD=${{ github.event.inputs.keyboard_target }}
           KEYMAP=${{ github.event.inputs.keymap_name }}
 
-          mkdir -p vial-qmk-repo/keyboards/$KEYBOARD/keymaps/$KEYMAP
-          cp -r yangtze-qmk/$KEYMAP/* vial-qmk-repo/keyboards/$KEYBOARD/keymaps/$KEYMAP/
-          echo "Keymap files copied to vial-qmk-repo/keyboards/$KEYBOARD/keymaps/$KEYMAP/"
+          mkdir -p vial-qmk/keyboards/$KEYBOARD/keymaps/$KEYMAP
+          cp -r yangtze-qmk/$KEYMAP/* vial-qmk/keyboards/$KEYBOARD/keymaps/$KEYMAP/
+          echo "Keymap files copied to vial-qmk/keyboards/$KEYBOARD/keymaps/$KEYMAP/"
 
       # 步骤 5: 编译固件
       - name: Compile Vial Firmware
-        working-directory: ./vial-qmk-repo
+        working-directory: ./vial-qmk
         run: |
           KEYBOARD=${{ github.event.inputs.keyboard_target }}
           KEYMAP=${{ github.event.inputs.keymap_name }}
