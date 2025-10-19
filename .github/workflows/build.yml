@@ -19,7 +19,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 步骤 1: 检出 Vial-QMK 仓库
+      - name: Now I can CD
+        run: |
+          pwd   # 打印当前目录：$GITHUB_WORKSPACE
+          ls -F # 应该能看到你的仓库文件
       - name: Checkout Vial-QMK Firmware
         uses: actions/checkout@v4
         with:
@@ -30,7 +33,6 @@ jobs:
           pwd   # 打印当前目录：$GITHUB_WORKSPACE
           ls -F # 应该能看到你的仓库文件
 
-      # 步骤 2: 检出你的 Keymap 仓库
       - name: Checkout Your Keymap Files
         uses: actions/checkout@v4
 
@@ -39,13 +41,11 @@ jobs:
           pwd   # 打印当前目录：$GITHUB_WORKSPACE
           ls -F # 应该能看到你的仓库文件
 
-      # 步骤 3: 初始化 QMK submodules
       - name: Init Vial-QMK Submodules
         run: |
           cd vial-qmk
           git submodule update --init --recursive
 
-      # 步骤 4: 复制 Keymap 文件
       - name: Copy Keymap to Vial-QMK Folder
         # 编译 keymap.c 格式的 Keymap，你需要将 Keymap 文件夹放置到 QMK 代码库的正确位置
         # 这里假设你的 Keymap 放在 QMK 仓库的 keyboards/<键盘名>/keymaps/ 下
@@ -57,7 +57,6 @@ jobs:
           cp -r yangtze-qmk/$KEYMAP/* vial-qmk/keyboards/$KEYBOARD/keymaps/$KEYMAP/
           echo "Keymap files copied to vial-qmk/keyboards/$KEYBOARD/keymaps/$KEYMAP/"
 
-      # 步骤 5: 编译固件
       - name: Compile Vial Firmware
         working-directory: ./vial-qmk
         run: |
@@ -66,7 +65,6 @@ jobs:
 
           make $KEYBOARD:$KEYMAP -j 1
 
-      # 步骤 6: 上传 Artifacts
       - name: Upload Firmware Artifact
         uses: actions/upload-artifact@v4
         with:
