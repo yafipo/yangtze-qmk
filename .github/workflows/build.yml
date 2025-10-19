@@ -24,12 +24,20 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: vial-kb/vial-qmk
-          path: vial-qmk
           fetch-depth: 0
+      - name: Now I can CD
+        run: |
+          pwd   # 打印当前目录：$GITHUB_WORKSPACE
+          ls -F # 应该能看到你的仓库文件
 
       # 步骤 2: 检出你的 Keymap 仓库
       - name: Checkout Your Keymap Files
         uses: actions/checkout@v4
+
+      - name: Now I can CD
+        run: |
+          pwd   # 打印当前目录：$GITHUB_WORKSPACE
+          ls -F # 应该能看到你的仓库文件
 
       # 步骤 3: 初始化 QMK submodules
       - name: Init Vial-QMK Submodules
