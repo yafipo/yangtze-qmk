@@ -16,7 +16,8 @@ on:
 
 jobs:
   build:
-    container: qmkfm/qmk_firmware:latest
+    container:
+      image: ghcr.io/qmk/qmk_cli:latest
     runs-on: ubuntu-latest
 
     steps:
@@ -30,12 +31,7 @@ jobs:
         with:
           repository: vial-kb/vial-qmk
           path: vial-qmk
-          fetch-depth: 0
-
-      - name: Init Vial-QMK Submodules
-        run: |
-          cd vial-qmk
-          git submodule update --init --recursive
+          submodules: recursive
 
       - name: Copy Keymap to Vial-QMK Folder
         # 编译 keymap.c 格式的 Keymap，你需要将 Keymap 文件夹放置到 QMK 代码库的正确位置
