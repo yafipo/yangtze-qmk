@@ -24,6 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: vial-kb/vial-qmk
+          path: vial-qmk
           fetch-depth: 0
 
       # 步骤 2: 检出你的 Keymap 仓库
@@ -62,5 +63,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ github.event.inputs.keyboard_target }}_Vial_${{ github.event.inputs.keymap_name }}_Firmware
-          path: ./vial-qmk-repo/.build/*.{hex,bin}
+          path: ./vial-qmk/.build/*.{hex,bin}
           retention-days: 7
