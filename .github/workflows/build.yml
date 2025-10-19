@@ -51,8 +51,12 @@ jobs:
           KEYMAP=${{ github.event.inputs.keymap_name }}
 
           pwd
-          ls
+          ls ..
+          echo "---"
+          ls ../yangtze-qmk
+          echo "---"
           ls keyboards/$KEYBOARD/keymaps
+          echo "---"
           ls keyboards/$KEYBOARD/keymaps/$KEYMAP
 
           make $KEYBOARD:$KEYMAP -j 1
