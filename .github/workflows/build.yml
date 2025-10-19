@@ -38,7 +38,7 @@ jobs:
           make $KEYBOARD:$KEYMAP -j 1
           cp .build/*.uf2 $GITHUB_WORKSPACE/
 
-      - name: Debug: list .build with full path
+      - name: Debug
         run: |
           echo "PWD: $(pwd)"
           find vial-qmk/.build -type f
@@ -47,5 +47,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.KEYBOARD }}_Vial_${{ env.KEYMAP }}_Firmware
-          path: *.{hex,bin,uf2}
+          path: ./*.{hex,bin,uf2}
           retention-days: 7
