@@ -28,11 +28,9 @@ jobs:
           submodules: recursive
 
       - name: Copy Keymap to Vial-QMK Folder
-        # 编译 keymap.c 格式的 Keymap，你需要将 Keymap 文件夹放置到 QMK 代码库的正确位置
-        # 这里假设你的 Keymap 放在 QMK 仓库的 keyboards/<键盘名>/keymaps/ 下
         run: |
-          mkdir -p vial-qmk/keyboards/$KEYBOARD/keymaps
-          cp -r yangtze-qmk/$KEYMAP vial-qmk/keyboards/$KEYBOARD/keymaps
+          mkdir -p vial-qmk/keyboards/$KEYBOARD
+          cp -r yangtze-qmk/* vial-qmk/keyboards/$KEYBOARD
           echo "Keymap files copied to vial-qmk/keyboards/$KEYBOARD/keymaps/$KEYMAP/"
 
       - name: Compile Vial Firmware
