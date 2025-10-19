@@ -29,8 +29,7 @@ jobs:
 
       - name: Copy Keymap to Vial-QMK Folder
         run: |
-          mkdir -p vial-qmk/keyboards/$KEYBOARD
-          cp -r yangtze-qmk/* vial-qmk/keyboards/$KEYBOARD
+          mv yangtze-qmk vial-qmk/keyboards/$KEYBOARD
           echo "Keymap files copied to vial-qmk/keyboards/$KEYBOARD/keymaps/$KEYMAP/"
 
       - name: Compile Vial Firmware
