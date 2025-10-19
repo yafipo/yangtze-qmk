@@ -50,6 +50,11 @@ jobs:
           KEYBOARD=${{ github.event.inputs.keyboard_target }}
           KEYMAP=${{ github.event.inputs.keymap_name }}
 
+          pwd
+          ls
+          ls keyboards/$KEYBOARD/keymaps
+          ls keyboards/$KEYBOARD/keymaps/$KEYMAP
+
           make $KEYBOARD:$KEYMAP -j 1
 
       - name: Upload Firmware Artifact
