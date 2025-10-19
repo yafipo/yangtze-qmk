@@ -16,6 +16,7 @@ on:
 
 jobs:
   build:
+    container: qmkfm/qmk_firmware:latest
     runs-on: ubuntu-latest
 
     steps:
@@ -30,11 +31,6 @@ jobs:
           repository: vial-kb/vial-qmk
           path: vial-qmk
           fetch-depth: 0
-
-      - name: Now I can CD
-        run: |
-          pwd   # 打印当前目录：$GITHUB_WORKSPACE
-          ls -F # 应该能看到你的仓库文件
 
       - name: Init Vial-QMK Submodules
         run: |
