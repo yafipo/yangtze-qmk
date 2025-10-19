@@ -38,7 +38,7 @@ jobs:
           make $KEYBOARD:$KEYMAP -j 1
 
       - name: test
-        run:
+        run: |
           pwd
           ls
           echo "==================="
