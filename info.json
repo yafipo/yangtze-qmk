@@ -97,15 +97,15 @@
         { "label": "R_Shift", "matrix": [3, 11], "x": 3, "y": 11 },
         { "label": "Up", "matrix": [3, 12], "x": 3, "y": 12 },
         { "label": "PgDn", "matrix": [3, 13], "x": 3, "y": 13 },
-        { "label": "Ctrl", "matrix": [3, 0], "x": 4, "y": 0 },
-        { "label": "Win", "matrix": [2, 1], "x": 4, "y": 1 },
-        { "label": "L_Alt", "matrix": [3, 2], "x": 4, "y": 2 },
-        { "label": "Space", "matrix": [3, 4], "x": 4, "y": 4 },
-        { "label": "R_Alt", "matrix": [3, 8], "x": 4, "y": 8 },
-        { "label": "Fn", "matrix": [3, 10], "x": 4, "y": 10 },
-        { "label": "Left", "matrix": [3, 11], "x": 4, "y": 11 },
-        { "label": "Down", "matrix": [3, 12], "x": 4, "y": 12 },
-        { "label": "Right", "matrix": [3, 13], "x": 4, "y": 13 }
+        { "label": "Ctrl", "matrix": [4, 0], "x": 4, "y": 0 },
+        { "label": "Win", "matrix": [4, 1], "x": 4, "y": 1 },
+        { "label": "L_Alt", "matrix": [4, 2], "x": 4, "y": 2 },
+        { "label": "Space", "matrix": [4, 4], "x": 4, "y": 4 },
+        { "label": "R_Alt", "matrix": [4, 8], "x": 4, "y": 8 },
+        { "label": "Fn", "matrix": [4, 10], "x": 4, "y": 10 },
+        { "label": "Left", "matrix": [4, 11], "x": 4, "y": 11 },
+        { "label": "Down", "matrix": [4, 12], "x": 4, "y": 12 },
+        { "label": "Right", "matrix": [4, 13], "x": 4, "y": 13 }
       ]
     }
   }

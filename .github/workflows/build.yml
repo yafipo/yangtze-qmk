@@ -35,8 +35,6 @@ jobs:
       - name: Compile Vial Firmware
         working-directory: ./vial-qmk
         run: |
-          ls keyboards/$KEYBOARD/keymaps/$KEYMAP
-
           make $KEYBOARD:$KEYMAP -j 1
 
       - name: Upload Firmware Artifact
