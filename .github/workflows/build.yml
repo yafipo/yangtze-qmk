@@ -40,9 +40,14 @@ jobs:
           KEYBOARD=${{ github.event.inputs.keyboard_target }}
           KEYMAP=${{ github.event.inputs.keymap_name }}
 
+          pwd
+          ls
           mkdir -p vial-qmk/keyboards/$KEYBOARD/keymaps
           cp -r yangtze-qmk/$KEYMAP vial-qmk/keyboards/$KEYBOARD/keymaps
           echo "Keymap files copied to vial-qmk/keyboards/$KEYBOARD/keymaps/$KEYMAP/"
+          ls vial-qmk/keyboards/$KEYBOARD/keymaps
+          echo "---"
+          ls vial-qmk/keyboards/$KEYBOARD/keymaps/$KEYMAP
 
       - name: Compile Vial Firmware
         working-directory: ./vial-qmk
