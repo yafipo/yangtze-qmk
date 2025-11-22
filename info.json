@@ -100,12 +100,12 @@
         { "label": "Ctrl", "matrix": [4, 0], "x": 4, "y": 0 },
         { "label": "Win", "matrix": [4, 1], "x": 4, "y": 1 },
         { "label": "L_Alt", "matrix": [4, 2], "x": 4, "y": 2 },
-        { "label": "Space", "matrix": [4, 4], "x": 4, "y": 4 },
-        { "label": "R_Alt", "matrix": [4, 8], "x": 4, "y": 8 },
+        { "label": "Space", "matrix": [4, 5], "x": 4, "y": 5 },
+        { "label": "R_Alt", "matrix": [4, 9], "x": 4, "y": 9 },
         { "label": "Fn", "matrix": [4, 10], "x": 4, "y": 10 },
         { "label": "Left", "matrix": [4, 11], "x": 4, "y": 11 },
         { "label": "Down", "matrix": [4, 12], "x": 4, "y": 12 },
-        { "label": "Right", "matrix": [4, 13], "x": 4, "y": 13 }
+        { "label": "Right", "matrix": [4, 14], "x": 4, "y": 14 }
       ]
     }
   }
