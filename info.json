@@ -12,23 +12,23 @@
   },
   "matrix_pins": {
     "cols": [
-      "GP0",
-      "GP1",
-      "GP2",
-      "GP3",
-      "GP4",
-      "GP5",
-      "GP6",
-      "GP7",
-      "GP8",
+      "GP12",
+      "GP13",
+      "GP14",
+      "GP15",
+      "GP22",
+      "GP23",
+      "GP24",
+      "GP25",
       "GP9",
       "GP10",
       "GP11",
-      "GP12",
       "GP13",
-      "GP14"
+      "GP14",
+      "GP15",
+      "GP16"
     ],
-    "rows": ["GP15", "GP16", "GP17", "GP18", "GP19"]
+    "rows": ["GP21", "GP20", "GP19", "GP18", "GP17"]
   },
   "processor": "RP2040",
   "usb": {
@@ -52,8 +52,8 @@
         { "label": "0)", "matrix": [0, 10], "x": 0, "y": 10 },
         { "label": "-_", "matrix": [0, 11], "x": 0, "y": 11 },
         { "label": "=+", "matrix": [0, 12], "x": 0, "y": 12 },
-        { "label": "`~", "matrix": [0, 13], "x": 0, "y": 13 },
-        { "label": "Backspace", "matrix": [0, 14], "x": 0, "y": 14 },
+        { "label": "Backspace", "matrix": [0, 13], "x": 0, "y": 13 },
+        { "label": "`~", "matrix": [0, 14], "x": 0, "y": 14 },
         { "label": "Tab", "matrix": [1, 0], "x": 1, "y": 0 },
         { "label": "Q", "matrix": [1, 1], "x": 1, "y": 1 },
         { "label": "W", "matrix": [1, 2], "x": 1, "y": 2 },
